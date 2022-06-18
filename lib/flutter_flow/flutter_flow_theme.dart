@@ -42,6 +42,9 @@ abstract class FlutterFlowTheme {
   Color pokmonLogoLightBlue;
   Color pokemonLogoYellowShadow;
   Color pokemonDarkBlue;
+  Color primaryBtnText;
+  Color lineColor;
+  Color customColor1;
 
   TextStyle get title1 => GoogleFonts.getFont(
         'Poppins',
@@ -101,6 +104,9 @@ class LightModeTheme extends FlutterFlowTheme {
   Color pokmonLogoLightBlue = Color(0xFF2A75BB);
   Color pokemonLogoYellowShadow = Color(0xFFC7A008);
   Color pokemonDarkBlue = Color(0xFF3C5AA6);
+  Color primaryBtnText = Color(0xFFFFFFFF);
+  Color lineColor = Color(0xFFE0E3E7);
+  Color customColor1 = Color(0xFF2FB73C);
 }
 
 class DarkModeTheme extends FlutterFlowTheme {
@@ -117,6 +123,9 @@ class DarkModeTheme extends FlutterFlowTheme {
   Color pokmonLogoLightBlue = Color(0xFF2A75BB);
   Color pokemonLogoYellowShadow = Color(0xFFC7A008);
   Color pokemonDarkBlue = Color(0xFF3C5AA6);
+  Color primaryBtnText = Color(0xFFFFFFFF);
+  Color lineColor = Color(0xFF22282F);
+  Color customColor1 = Color(0xFF452FB7);
 }
 
 extension TextStyleHelper on TextStyle {
