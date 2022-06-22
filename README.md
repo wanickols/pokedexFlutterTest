@@ -1,31 +1,12 @@
-# WAN-060122-TestOne-V01
+# pokedexFlutterTest
+## To Download
+This is a flutter project that can be downloaded and run in android studio or Xcode. It will require the flutter extensions and/or the flutter app. 
 
-A new Flutter project.
+## Purpose
+This is a test project to test out the abilities of FlutterFlow as well as to familiarize myself with dart and flutter. I have a project I will be working on developing an app for both android and ios for phones and tablets, and this tool is a potential solution.
 
-## Getting Started
+## Benefits
+While I have experience in mobile design with android studio, I hope to get a much more robust understanding of mobile development as well as learn dart and flutter for future use.
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
-
-### IMPORTANT:
-
-For projects with Firestore integration, you must first run the following commands to ensure the project compiles:
-
-```
-flutter pub get
-flutter packages pub run build_runner build --delete-conflicting-outputs
-```
-
-This command creates the generated files that parse each Record from Firestore into a schema object.
-
-### Getting started continued:
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Status
+So far, I have explored flutter flow quite comprehensively and done a little dart. I have a working project capable of API calls and basic widgets. 

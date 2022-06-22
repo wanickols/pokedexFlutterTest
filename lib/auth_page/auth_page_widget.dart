@@ -388,6 +388,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                                   }
                                                   context.goNamedAuth(
                                                       'pokemonPage', mounted);
+
                                                 },
                                                 child: Container(
                                                   width: 50,
