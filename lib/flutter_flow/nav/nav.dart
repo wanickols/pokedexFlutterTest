@@ -66,36 +66,61 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
       errorBuilder: (context, _) =>
-          appStateNotifier.loggedIn ? PokedexHomeWidget() : AuthPageWidget(),
+          appStateNotifier.loggedIn ? PokemonPageWidget() : AuthPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
           builder: (context, _) => appStateNotifier.loggedIn
-              ? PokedexHomeWidget()
+              ? PokemonPageWidget()
               : AuthPageWidget(),
           routes: [
+            FFRoute(
+              name: 'authPage',
+              path: 'authPage',
+              builder: (context, params) => AuthPageWidget(),
+            ),
+            FFRoute(
+              name: 'Onboarding',
+              path: 'onboarding',
+              builder: (context, params) => OnboardingWidget(),
+            ),
+            FFRoute(
+              name: 'pokemonPage',
+              path: 'pokemonPage',
+              builder: (context, params) => PokemonPageWidget(),
+            ),
             FFRoute(
               name: 'ForgotPassword',
               path: 'forgotPassword',
               builder: (context, params) => ForgotPasswordWidget(),
             ),
             FFRoute(
-              name: 'pokedexHome',
-              path: 'pokedexHome',
-              builder: (context, params) => PokedexHomeWidget(),
+              name: 'homePage',
+              path: 'homePage',
+              builder: (context, params) => HomePageWidget(),
             ),
             FFRoute(
-              name: 'pokedexInfo',
-              path: 'pokedexInfo',
-              builder: (context, params) => PokedexInfoWidget(
+              name: 'pokemonInfo',
+              path: 'pokemonInfo',
+              builder: (context, params) => PokemonInfoWidget(
                 pokemonUrlApi: params.getParam('pokemonUrlApi', ParamType.JSON),
               ),
             ),
             FFRoute(
-              name: 'authPage',
-              path: 'authPage',
-              builder: (context, params) => AuthPageWidget(),
+              name: 'berriesPage',
+              path: 'berriesPage',
+              builder: (context, params) => BerriesPageWidget(),
+            ),
+            FFRoute(
+              name: 'gamesPage',
+              path: 'gamesPage',
+              builder: (context, params) => GamesPageWidget(),
+            ),
+            FFRoute(
+              name: 'teamCrafting',
+              path: 'teamCrafting',
+              builder: (context, params) => TeamCraftingWidget(),
             )
           ].map((r) => r.toRoute(appStateNotifier)).toList(),
         ).toRoute(appStateNotifier),
