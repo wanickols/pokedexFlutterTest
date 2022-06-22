@@ -37,7 +37,7 @@ class GetPokemonListCall {
 
 class GetPokemonCall {
   static Future<ApiCallResponse> call({
-    int id,
+    String id = '',
   }) {
     return ApiManager.instance.makeApiCall(
       callName: 'getPokemon',

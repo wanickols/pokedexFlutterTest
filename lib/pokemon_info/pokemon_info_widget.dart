@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class PokedexInfoWidget extends StatefulWidget {
-  const PokedexInfoWidget({
+class PokemonInfoWidget extends StatefulWidget {
+  const PokemonInfoWidget({
     Key key,
     this.pokemonUrlApi,
   }) : super(key: key);
@@ -15,10 +15,10 @@ class PokedexInfoWidget extends StatefulWidget {
   final dynamic pokemonUrlApi;
 
   @override
-  _PokedexInfoWidgetState createState() => _PokedexInfoWidgetState();
+  _PokemonInfoWidgetState createState() => _PokemonInfoWidgetState();
 }
 
-class _PokedexInfoWidgetState extends State<PokedexInfoWidget> {
+class _PokemonInfoWidgetState extends State<PokemonInfoWidget> {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
@@ -486,7 +486,7 @@ class _PokedexInfoWidgetState extends State<PokedexInfoWidget> {
                                                 return InkWell(
                                                   onTap: () async {
                                                     context.pushNamed(
-                                                      'pokedexInfo',
+                                                      'pokemonInfo',
                                                       queryParams: {
                                                         'pokemonUrlApi':
                                                             serializeParam(

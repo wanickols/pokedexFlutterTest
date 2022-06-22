@@ -81,10 +81,10 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Image.asset(
-                          'assets/images/logo_white.png',
-                          width: 160,
-                          height: 105,
-                          fit: BoxFit.cover,
+                          'assets/images/mew.png',
+                          width: MediaQuery.of(context).size.width * 0.5,
+                          height: MediaQuery.of(context).size.height * 0.225,
+                          fit: BoxFit.scaleDown,
                         ),
                       ],
                     ),
@@ -277,7 +277,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                               }
 
                                               context.goNamedAuth(
-                                                  'pokedexHome', mounted);
+                                                  'pokemonPage', mounted);
                                             },
                                             text: 'Login',
                                             options: FFButtonOptions(
@@ -387,7 +387,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                                     return;
                                                   }
                                                   context.goNamedAuth(
-                                                      'pokedexHome', mounted);
+                                                      'pokemonPage', mounted);
                                                 },
                                                 child: Container(
                                                   width: 50,
@@ -672,7 +672,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                                   .update(usersCreateData);
 
                                               context.goNamedAuth(
-                                                  'pokedexHome', mounted);
+                                                  'pokemonPage', mounted);
                                             },
                                             text: 'Create Account',
                                             options: FFButtonOptions(
@@ -752,7 +752,7 @@ class _AuthPageWidgetState extends State<AuthPageWidget> {
                                                     return;
                                                   }
                                                   context.goNamedAuth(
-                                                      'pokedexHome', mounted);
+                                                      'pokemonPage', mounted);
                                                 },
                                                 child: Container(
                                                   width: 50,
